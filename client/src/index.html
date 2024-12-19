@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApiJsonProvider</title>
+    <!-- Tailwind CSS -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <header
+      class="customnavStyle z-10 fixed top-0 left-0 flex items-center justify-between py-8 px-8 w-full h-12"
+    >
+      <div class="text-2xl font-extrabold">Kukandummyjson</div>
+      <nav class="xl:hidden md:block">
+        <ul class="flex gap-3 items-center">
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a href="./index.html">home</a>
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a href="./pages/doc.html">doc</a>
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a href="./pages/api.html">apiKey</a>
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a href="./pages/Auth.html"> login</a>
+          </li>
+          <button
+            class="bg-gradient-to-r px-6 py-1 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
+          >
+            <a href="">githhub</a>
+          </button>
+        </ul>
+      </nav>
+
+      <img
+        class="opennav text-black w-6 h-6 cursor-pointer md:hidden"
+        src="assets/open.svg"
+        alt=""
+      />
+    </header>
+
+    <!-- small width nav -->
+
+    <div
+      class="smallnav w-full h-[200vh] absolute top-0 left-0 bg-black z-50 md:hidden"
+      style="transform: translateX(-5000px)"
+    >
+      <nav class="pt-10 flex items-baseline justify-between">
+        <ul class="flex flex-col gap-3 items-start pl-5">
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a
+              class="text-[2.5rem] font-extrabold text-white customfont"
+              href="./index.html"
+              >home</a
+            >
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a
+              class="text-[2.5rem] font-extrabold text-white customfont"
+              href="./pages/doc.html"
+              >doc</a
+            >
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a
+              class="text-[2.5rem] font-extrabold text-white customfont"
+              href="./pages/api.html"
+              >api</a
+            >
+          </li>
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a
+              class="text-[2.5rem] font-extrabold text-white customfont"
+              href=""
+              >login</a
+            >
+          </li>
+
+          <li
+            class="capitalize font-bold cursor-pointer hover:underline transition-all"
+          >
+            <a
+              class="text-[2.5rem] font-extrabold text-white customfont"
+              href=""
+              >githhub</a
+            >
+          </li>
+        </ul>
+
+        <div class="text-white">
+          <img
+            class="closenav text-white bg-white m-5 cursor-pointer"
+            src="./assets/close.svg"
+            alt=""
+          />
+        </div>
+      </nav>
+    </div>
+
+    <div class="relative group">
+      <div
+        class="backToTop group fixed cursor-pointer right-4 bottom-4 w-12 h-12 rounded-full ring-1"
+      >
+        <img src="./assets/Agu_Display/backToTop.png" alt="" />
+      </div>
+      <div
+        class="fixed hidden bottom-14 right-7 capitalize group-hover:block bg-gray-700 text-white text-sm rounded px-2 py-1"
+      >
+        back to top!
+      </div>
+    </div>
+
+    <!-- single page -->
+
+    <section class="page w-full h-screen pt-20 px-5">
+      <div
+        class="grid grid-cols-2 place-content-center xl:grid-cols-1 md:grid-cols-2"
+      >
+        <div class="first">
+          <h1 class="text-[3rem] leading-11 font-extrabold capitalize">
+            Test REST API for Placeholder JSON data
+          </h1>
+
+          <h6 class="m-2">
+            Easily generate mock JSON data for your frontend using
+            Kukandummyjson Server — no need for backend setup!
+          </h6>
+          <p class="text-sm p-2">
+            Easily generate mock JSON data for your frontend using
+            Kukandummyjson Server — no need for backend setup! Quickly simulate
+            real-world API responses and seamlessly integrate mock data into
+            your application to accelerate development and testing.
+          </p>
+
+          <div class="flex gap-5 p-5">
+            <button
+              class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
+            >
+              view on github
+            </button>
+            <button
+              class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
+            >
+              read doc
+            </button>
+          </div>
+        </div>
+
+        <div class="second pt-5 flex flex-col gap-2 xl:hidden md:block">
+          <img src="https://assets.dummyjson.com/public/img/hero-image.svg" />
+
+          <div class="flex gap-5 ml-80 pt-10">
+            <a href="" target="_blank">
+              <img src="assets/github.svg" alt="img" />
+            </a>
+            <a href="" target="_blank">
+              <img src="assets/linkedin.svg" alt="img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- single page -->
+    <section
+      class="page w-full h-screen pt-20 px-5 bg-gradient-to-t from-purple-50 to-amber-50"
+    >
+      <div
+        class="grid grid-cols-2 place-content-center gap-2 xl:grid-cols-1 md:grid-cols-2"
+      >
+        <div class="second pt-5 flex flex-col xl:hidden md:block">
+          <img
+            src="https://assets.dummyjson.com/public/img/multiple-options.svg"
+            alt="Image"
+          />
+        </div>
+
+        <div class="first">
+          <h1 class="text-[3rem] leading-11 font-extrabold capitalize">
+            instantly Usable Tools for Your Development Needs
+          </h1>
+
+          <p class="text-sm p-1">
+            Access a collection of ready-to-use tools, libraries, and APIs that
+            speed up your development process. Skip the setup and focus on
+            building, testing, and deploying your projects with ease.
+          </p>
+
+          <div class="flex gap-5 p-3">
+            <button
+              class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
+            >
+              read doc
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- single page -->
+    <section
+      class="page w-full h-screen pt-20 px-5 bg-gradient-to-t from-purple-50 to-amber-50"
+    >
+      <div
+        class="grid grid-cols-2 place-content-center gap-5 xl:grid-cols-1 md:grid-cols-2"
+      >
+        <div class="first">
+          <h1 class="text-[3rem] leading-11 font-extrabold capitalize">
+            Pre-built Tools for Your Development Needs
+          </h1>
+
+          <p class="text-sm p-2">
+            Unlock a suite of ready-to-use tools designed to simplify and
+            accelerate your development workflow. Whether you’re building web
+            applications, integrating APIs, or streamlining frontend and backend
+            tasks, these tools are crafted to save time and boost
+            productivity—so you can focus on creating and innovating.
+          </p>
+
+          <div class="flex gap-5 p-5">
+            <button
+              class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
+            >
+              try it now
+            </button>
+          </div>
+        </div>
+        <div class="second pt-5 flex flex-col gap-2 xl:hidden md:block">
+          <img src="./assets/Wavy Buddies - Delivering.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- single page -->
+    <section
+      class="page w-ful h-[120vh] pt-20 px-5 bg-gradient-to-t from-purple-50 to-amber-50"
+    >
+      <div class="text-center">
+        <div>
+          <h1 class="text-[3rem] leading-11 font-extrabold capitalize">
+            Essential Resources:
+          </h1>
+          <p>
+            Gain access to well-structured, real-world data, ready to integrate
+            and use seamlessly in your projects.
+          </p>
+        </div>
+
+        <div class="tabParent grid grid-cols-1 gap-5 p-5">
+          <!-- single -->
+          <div
+            class="resorce h-52 group overflow-hidden flex flex-col bg-gradient-to-r px-6 py-4 rounded-lg shadow from-purple-300 via-blue-400 to-lime-200 capitalize font-bold cursor-pointer hover:bg-gradient-to-r hover:from-transparent hover:via-pink-100 hover:to-transparent"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="customfont text-lg font-extrabold group-hover:text-pink-400"
+                >prodcut</span
+              >
+              <span class="group-hover:text-pink-400"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="text-center pt-10 px-12 pb-20">
+              <h6 class="font-blder">Why Use Our prodcut Data API?</h6>
+
+              <p class="text-[10px]">
+                Perfect for Learning: A simple and intuitive tool for practicing
+                API requests and data management.
+              </p>
+              <p class="text-[10px]">
+                Reliable for Production: Well-documented and fast, ideal for
+                production apps, so you can focus on building features.
+              </p>
+              <p class="text-[10px]">
+                Seamless Integration: Works effortlessly with modern
+                technologies like React and Node.js.
+              </p>
+              <p class="text-[10px]">
+                Real-World Data: Access real-world data to easily build features
+                like user management and posts without creating your own
+                database.
+              </p>
+            </div>
+          </div>
+
+          
+          <!-- single -->
+          <div
+            class="resorce h-14 group overflow-hidden flex flex-col bg-gradient-to-r px-6 py-4 rounded-lg shadow from-purple-300 via-blue-400 to-lime-200 capitalize font-bold cursor-pointer hover:bg-gradient-to-r hover:from-transparent hover:via-pink-100 hover:to-transparent"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="customfont text-lg font-extrabold group-hover:text-pink-400"
+                >quotes</span
+              >
+              <span class="group-hover:text-pink-400"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="text-center pt-10 px-12">
+              <h6 class="font-bold">Why Use Our Quote API?</h6>
+
+              <p class="text-[10px]">
+                Perfect for Learning: A simple and intuitive tool for practicing
+                API requests and working with dynamic quote data.
+              </p>
+              <p class="text-[10px]">
+                Reliable for Production: Well-documented and fast, ideal for
+                production apps, allowing you to focus on delivering meaningful
+                quotes.
+              </p>
+              <p class="text-[10px]">
+                Seamless Integration: Easily integrates with modern technologies
+                like React, Node.js, and other frameworks.
+              </p>
+              <p class="text-[10px]">
+                Real-Time Inspiration: Access a wide variety of quotes to
+                inspire your users, perfect for features like daily quote
+                generators or motivational apps.
+              </p>
+            </div>
+          </div>
+
+          <!-- single -->
+          <div
+            class="resorce h-14 group overflow-hidden flex flex-col bg-gradient-to-r px-6 py-4 rounded-lg shadow from-purple-300 via-blue-400 to-lime-200 capitalize font-bold cursor-pointer hover:bg-gradient-to-r hover:from-transparent hover:via-pink-100 hover:to-transparent"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="customfont text-lg font-extrabold group-hover:text-pink-400"
+                >postes</span
+              >
+
+              <span class="group-hover:text-pink-400"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="text-center pt-10 px-12">
+              <h6 class="font-bold">Why Use Our Post API?</h6>
+
+              <p class="text-[10px]">
+                Perfect for Learning: A simple and intuitive tool for practicing
+                API requests and managing post data.
+              </p>
+              <p class="text-[10px]">
+                Reliable for Production: Well-documented and fast, ideal for
+                production apps, allowing you to focus on building post-related
+                features.
+              </p>
+              <p class="text-[10px]">
+                Seamless Integration: Easily integrates with modern technologies
+                like React, Node.js, and other frameworks.
+              </p>
+              <p class="text-[10px]">
+                Real-World Data: Access real-world post data, making it easy to
+                build features like blog posts, articles, or product reviews.
+              </p>
+            </div>
+          </div>
+
+          <!-- single -->
+          <div
+            class="resorce h-14 group overflow-hidden flex flex-col bg-gradient-to-r px-6 py-4 rounded-lg shadow from-purple-300 via-blue-400 to-lime-200 capitalize font-bold cursor-pointer hover:bg-gradient-to-r hover:from-transparent hover:via-pink-100 hover:to-transparent"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="customfont text-lg font-extrabold group-hover:text-pink-400"
+                >users</span
+              >
+              <span class="group-hover:text-pink-400"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="text-center pt-10 px-12">
+              <h6 class="font-bold">Why Use Our User API?</h6>
+
+              <p class="text-[10px]">
+                Perfect for Learning: A simple and intuitive tool for practicing
+                API requests and managing user data.
+              </p>
+              <p class="text-[10px]">
+                Reliable for Production: Well-documented and fast, ideal for
+                production apps, allowing you to focus on building user
+                management features.
+              </p>
+              <p class="text-[10px]">
+                Seamless Integration: Easily integrates with modern technologies
+                like React, Node.js, and other frameworks.
+              </p>
+              <p class="text-[10px]">
+                Real-World Data: Access real-world user data, making it easy to
+                create personalized user experiences and manage profiles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- single page -->
+    <section
+      class="xl:mt-44 md:mt-0 page text-center bg-gradient-to-r from-teal-50 to-blue-50 grid place-content-center w-full h-screen pt-20 px-5"
+    >
+      <div class="grid place-content-center">
+        <div class="first">
+          <h1 class="text-[3rem] leading-11 font-extrabold capitalize">
+            Thank you!
+          </h1>
+
+          <p class="font-bold">
+            Thank you for being a valued member of the Kukandummyjson community.
+            If you haven't already, we encourage you to explore all the tools
+            and resources available to make the most of your experience.
+          </p>
+
+          <p class="capitalize font-bold mt-2">
+            This adds a bit more warmth and encourages user interaction. Let me
+            know if you'd like more revisions!
+            <span class="underline text-bold text-red-900 p-1"
+              >and dont forget to give me star in github</span
+            >
+          </p>
+        </div>
+
+        <div class="flex gap-5 m-auto pt-10">
+          <a href="" target="_blank">
+            <img
+              class="hover:scale-125 transition-all"
+              src="assets/github.svg"
+              alt="img"
+            />
+          </a>
+
+          <a href="" target="_blank">
+            <img
+              class="hover:scale-125 transition-all"
+              src="assets/linkedin.svg"
+              alt="img"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- One Line to Include GSAP and All Plugins -->
+    <script src="../node_modules/gsap/dist/all.js"></script>
+
+    <!-- Import jQuery -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="script/indexscipt.js"></script>
+    <script src="./script/GSAP/navscript.js"></script>
+
+    <!-- gasp script -->
+    <script src="./script/GSAP/iconscript.js"></script>
+  </body>
+</html>
+
+<!-- <div
+        class="w-96 h-96 animate-Blob animation-delay-200 opacity-30 rounded-full absolute top-44 left-60 mix-blend-multiply bg-gradient-to-t from-blue-600 via-pink-600 to-red-500 filter blur-xl"
+      ></div>
+      <div
+        class="w-96 h-96 animate-Blob animation-delay-500 opacity-30 rounded-full absolute top-20 left-56 mix-blend-multiply bg-gradient-to-t from-purple-600 via-pink-600 to-lime-500 filter blur-xl"
+      ></div>
+      <div
+        class="w-96 h-96 animate-Blob animation-delay-900 opacity-30 rounded-full absolute top-56 left-96 mix-blend-multiply bg-gradient-to-t from-purple-300 via-pink-600 to-yellow-100 filter blur-xl"
+      ></div> -->
+
+<!-- <img src="https://assets.dummyjson.com/public/img/icons/arrow-down-1.svg" alt="arrow-down-icon" class="arrow-down"> -->
