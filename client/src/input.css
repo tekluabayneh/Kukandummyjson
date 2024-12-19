@@ -1,0 +1,43 @@
+/* src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customnavStyle {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 2s;
+  }
+  .animation-delay-900 {
+    animation-delay: 9s;
+  }
+  .animation-delay-500 {
+    animation-delay: 5s;
+  }
+}
+
+@font-face {
+  font-family: "Agu Display";
+  src: url("./assets/Agu_Display/AguDisplay-Regular-VariableFont_MORF.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.customfont {
+  font-family: "Agu Display", sans-serif;
+}
