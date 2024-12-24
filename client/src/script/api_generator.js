@@ -17,18 +17,26 @@ gsap.from(apkiekey_home, {
   delay: 0.3,
 });
 
-document
-  .getElementById("apiKeyForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const apiKey =
-      "sk-" +
-      Math.random().toString(36).substr(2, 16) +
-      "-" +
-      Math.random().toString(36).substr(2, 8);
-
-    // Display the API Key
-    document.getElementById("output").classList.remove("hidden");
-    document.getElementById("apiKey").textContent = apiKey;
-  });
+var apiKey = sessionStorage.getItem("api_key");
+console.log(apiKey);
+document.getElementById("apiKey").innerText = apiKey;
+const copyButton = document.querySelector(".copyButton");
+// Add event listener to the copy button
+copyButton.addEventListener("click", function () {
+  // Use the Clipboard API to copy the API key to the clipboard
+  navigator.clipboard
+    .writeText(apiKey)
+    .then(function () {
+      $(".showCopyMesage").css({
+        display: "block",
+      });
+      setInterval(() => {
+        $(".showCopyMesage").css({
+          display: "none",
+        });
+      }, 1000);
+    })
+    .catch(function (err) {
+      console.error("Error copying text: ", err);
+    });
+});
