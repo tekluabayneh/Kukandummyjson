@@ -38,3 +38,7 @@ registerBtn.addEventListener("click", (e) => {
     opacity: 0,
   });
 });
+
+
+
+
