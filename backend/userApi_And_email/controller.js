@@ -16,8 +16,7 @@ const login = async (req, res) => {
     const [checkuserexistQueryResult] = await db.execute(checkuserexistQuery, [
       email,
     ]);
-
-
+    // console.log(checkuserexistQueryResult)
     // Compare the plain password with the hashed password stored in the database
     const comparePassword = await bcrypt.compare(
       password,
@@ -32,7 +31,7 @@ const login = async (req, res) => {
     const [apikeyQuryResult] = await db.execute(apikeyQury, [
       checkuserexistQueryResult[0].id,
     ]);
-console.log(apikeyQuryResult);
+    // console.log(apikeyQuryResult);
     // send back the generated api key for user
     res.status(200).json({
       message: "user login successfully",

@@ -3,7 +3,7 @@ $(function () {
     e.preventDefault();
     const email = $(".register_email").val();
     const password = $(".register_password").val();
-    console.log(email, password);
+    // console.log(email, password);
 
     // check and alert if the user didnt provider email and password
     if (!email || !password) {
@@ -19,7 +19,7 @@ $(function () {
         password: password,
       },
       success: (response) => {
-        console.log(response);
+        // console.log(response);
         sessionStorage.setItem("useremail", email);
         sessionStorage.setItem("api_key", response.apiKey);
         $(".register_email").val("");
@@ -38,7 +38,7 @@ $(function () {
     e.preventDefault();
     const email = $(".login_email").val();
     const password = $(".login_password").val();
-    console.log(email, password);
+    // console.log(email, password);
 
     // check and alert if the user didnt provider email and password
     if (!email || !password) {
@@ -55,7 +55,7 @@ $(function () {
         password: password,
       }),
       success: (response) => {
-        console.log(response);
+        // console.log(response);
         sessionStorage.setItem("useremail", email);
         sessionStorage.setItem("api_key", response.apiKey);
         $(".login_email").val("");
