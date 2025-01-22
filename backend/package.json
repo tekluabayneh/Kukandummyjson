@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "install": "npm install",
+    "build": "npm install",
     "deploy": "npm install && npm run build && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
