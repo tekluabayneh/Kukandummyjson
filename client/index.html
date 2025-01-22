@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ApiJsonProvider</title>
     <!-- Tailwind CSS -->
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./src/style.css" rel="stylesheet" />
   </head>
   <body class="bg-white">
     <header
@@ -22,22 +22,24 @@
           <li
             class="capitalize font-bold cursor-pointer hover:underline transition-all"
           >
-            <a href="./pages/Docs/users.html">doc</a>
+            <a href="./src/pages/Docs/users.html">doc</a>
           </li>
           <li
             class="capitalize font-bold cursor-pointer hover:underline transition-all"
           >
-            <a href="./pages/api.html">apiKey</a>
+            <a href="./src/pages/api.html">apiKey</a>
           </li>
           <li
             class="capitalize font-bold cursor-pointer hover:underline transition-all"
           >
-            <a href="./pages/Auth.html"> login</a>
+            <a href="./src/pages/Auth.html">login</a>
           </li>
           <button
             class="bg-gradient-to-r px-6 py-1 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
           >
-            <a href="https://github.com/tekluabayneh/Kukandummyjson" target="_blank"
+            <a
+              href="https://github.com/tekluabayneh/Kukandummyjson"
+              target="_blank"
               >githhub</a
             >
           </button>
@@ -46,7 +48,7 @@
 
       <img
         class="opennav text-black w-6 h-6 cursor-pointer md:hidden"
-        src="assets/open.svg"
+        src="./src/assets/open.svg"
         alt=""
       />
     </header>
@@ -73,7 +75,7 @@
           >
             <a
               class="text-[2.5rem] font-extrabold text-white customfont"
-              href="./pages/Docs/users.html"
+              href="./src/pages/Docs/users.html"
               >doc</a
             >
           </li>
@@ -82,7 +84,7 @@
           >
             <a
               class="text-[2.5rem] font-extrabold text-white customfont"
-              href="./pages/api.html"
+              href="./src/pages/api.html"
               >api</a
             >
           </li>
@@ -91,7 +93,7 @@
           >
             <a
               class="text-[2.5rem] font-extrabold text-white customfont"
-              href="./pages/Auth.html"
+              href="./src/pages/Auth.html"
               >login</a
             >
           </li>
@@ -111,7 +113,7 @@
         <div class="text-white">
           <img
             class="closenav text-white bg-white m-5 cursor-pointer"
-            src="./assets/close.svg"
+            src="./src/assets/close.svg"
             alt=""
           />
         </div>
@@ -122,7 +124,7 @@
       <div
         class="backToTop fixed cursor-pointer right-4 bottom-4 w-12 h-12 rounded-full ring-1"
       >
-        <img src="./assets/Agu_Display/backToTop.png" alt="" />
+        <img src="./src/assets/Agu_Display/backToTop.png" alt="" />
       </div>
       <div
         class="fixed hidden bottom-14 right-7 capitalize group-hover:block bg-gray-700 text-white text-sm rounded px-2 py-1"
@@ -176,13 +178,13 @@
 
           <div class="flex gap-5 ml-80 pt-1">
             <a href="https://github.com/tekluabayneh" target="_blank">
-              <img src="assets/github.svg" alt="img" />
+              <img src="./src/assets/github.svg" alt="img" />
             </a>
             <a
               href="https://www.linkedin.com/in/teklu-abayneh-8b93492b8/"
               target="_blank"
             >
-              <img src="assets/linkedin.svg" alt="img" />
+              <img src="./src/assets/linkedin.svg" alt="img" />
             </a>
           </div>
         </div>
@@ -218,7 +220,7 @@
             <button
               class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
             >
-              <a href="./pages/Docs/users.html">read doc</a>
+              <a href="./src/pages/Docs/users.html">read doc</a>
             </button>
           </div>
         </div>
@@ -249,12 +251,12 @@
             <button
               class="customfont bg-gradient-to-r px-6 py-2 rounded-lg shadow from-purple-700 via-blue-400 to-lime-400 capitalize font-bold cursor-pointer hover:bg-transparent hover:text-black"
             >
-              <a href="./pages/Docs/users.html">try it now</a>
+              <a href="./src/pages/Docs/users.html">try it now</a>
             </button>
           </div>
         </div>
         <div class="second pt-5 flex flex-col gap-2 hidden xl:hidden md:block">
-          <img src="./assets/Wavy Buddies - Delivering.png" alt="" />
+          <img src="./src/assets/Wavy Buddies - Delivering.png" alt="" />
         </div>
       </div>
     </section>
@@ -507,7 +509,7 @@
           <a href="https://github.com/tekluabayneh" target="_blank">
             <img
               class="hover:scale-125 transition-all"
-              src="assets/github.svg"
+              src="./src/assets/github.svg"
               alt="img"
             />
           </a>
@@ -518,7 +520,7 @@
           >
             <img
               class="hover:scale-125 transition-all"
-              src="assets/linkedin.svg"
+              src="./src/assets/linkedin.svg"
               alt="img"
             />
           </a>
@@ -534,14 +536,12 @@
     </footer>
 
     <!-- One Line to Include GSAP and All Plugins -->
-    <script src="../node_modules/gsap/dist/all.js"></script>
+    <script src="./node_modules/gsap/dist/all.js"></script>
 
     <!-- Import jQuery -->
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="script/indexscipt.js"></script>
-    <script src="./script/GSAP/navscript.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 
-    <!-- gasp script -->
-    <script src="./script/GSAP/iconscript.js"></script>
+    <script src="./src/script/indexscipt.js"></script>
+    <script src="./src/script/GSAP/navscript.js"></script>
   </body>
 </html>
