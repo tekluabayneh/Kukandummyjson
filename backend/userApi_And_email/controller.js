@@ -1,5 +1,6 @@
 const CryptoJS = require("crypto-js");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
+
 const db = require("../config/db");
 const login = async (req, res) => {
   try {
