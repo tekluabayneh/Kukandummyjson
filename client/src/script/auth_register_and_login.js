@@ -12,7 +12,7 @@ $(function () {
     }
 
     $.ajax({
-      url: "http://localhost:8000/user_apikey/register",
+      url: "https://kukandummyjson.onrender.com/user_apikey/register",
       type: "POST",
       data: {
         email: email,
@@ -47,7 +47,7 @@ $(function () {
     }
 
     $.ajax({
-      url: "http://localhost:8000/user_apikey/login",
+      url: "https://kukandummyjson.onrender.com/user_apikey/login",
       type: "POST",
       contentType: "application/json",
       data: JSON.stringify({

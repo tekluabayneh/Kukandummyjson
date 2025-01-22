@@ -153,7 +153,7 @@
 
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-            <code>fetch(<span class="c-api">'http://localhost:8000/posts?api_key=your_api-key'</span>)
+            <code>fetch(<span class="c-api">'https://kukandummyjson.onrender.com/posts?api_key=your_api-key'</span>)
             .then(res=&gt;res.json())
             .then(json=&gt;console.log(json))</code>
         </pre>
@@ -191,7 +191,7 @@
 
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-            <code>fetch(<span class="c-api">'http://localhost:8000/posts/getpostById/6?api_key=your_api-key'</span>)
+            <code>fetch(<span class="c-api">'https://kukandummyjson.onrender.com/posts/getpostById/6?api_key=your_api-key'</span>)
             .then(res=&gt;res.json())
             .then(json=&gt;console.log(json))</code>
         </pre>
@@ -229,7 +229,7 @@
 
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-               <code>fetch('<span class="c-api">http://localhost:8000/posts/addposts?api_key=your_api-key'</span>,{
+               <code>fetch('<span class="c-api">https://kukandummyjson.onrender.com/posts/addposts?api_key=your_api-key'</span>,{
             method:"POST",
             body:JSON.stringify({
                     id: 'exa-id',
@@ -271,7 +271,7 @@
           <p>get limited posts amount by just adding limit number into url params</p>
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-            <code>fetch(<span class="c-api">'http://localhost:8000/posts/limit/2?api_key=your_api-key'</span>)
+            <code>fetch(<span class="c-api">'https://kukandummyjson.onrender.com/posts/limit/2?api_key=your_api-key'</span>)
             .then(res=&gt;res.json())
             .then(json=&gt;console.log(json))</code>
         </pre>
@@ -306,7 +306,7 @@
           <p>you can also search post by views number <span class="font-bold">not that the server will look for grater than the number you give it</span></p>
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-            <code>fetch(<span class="c-api">'http://localhost:8000/posts/search/1400?api_key=apikey'</span>)
+            <code>fetch(<span class="c-api">'https://kukandummyjson.onrender.com/posts/search/1400?api_key=apikey'</span>)
             .then(res=&gt;res.json())
             .then(json=&gt;console.log(json))</code>
         </pre>
@@ -338,7 +338,7 @@
 
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-            <code>fetch(<span class="c-api">'http://localhost:8000/posts/deletepost/4?api_key=apikey'</span>)
+            <code>fetch(<span class="c-api">'https://kukandummyjson.onrender.com/posts/deletepost/4?api_key=apikey'</span>)
             .then(res=&gt;res.json())
             .then(json=&gt;console.log(json))</code>
         </pre>
@@ -365,7 +365,7 @@
 
           <div class="pr-5">
             <pre class="language-javascript rounded-lg"> 
-         <code>fetch('<span class="c-api">http://localhost:8000/posts/updatepost?api_key=your_api-key'</span>,{
+         <code>fetch('<span class="c-api">https://kukandummyjson.onrender.com/posts/updatepost?api_key=your_api-key'</span>,{
             method:"PUT",
             body:JSON.stringify(
                 {
